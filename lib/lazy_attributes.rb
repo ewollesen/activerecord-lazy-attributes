@@ -47,7 +47,7 @@ module DerGuteMoritz
         private
         
         def default_select_with_lazy_attributes(qualified)
-          if lazy_attributes.empty?
+          if lazy_attributes.blank?
             default_select_without_lazy_attributes(qualified)
           else
             if qualified
@@ -67,7 +67,7 @@ module DerGuteMoritz
         end
         
         def column_names_with_lazy_attributes
-          if active_record.lazy_attributes.empty?
+          if active_record.lazy_attributes.blank?
             column_names_without_lazy_attributes
           else
             active_record.eager_attributes
